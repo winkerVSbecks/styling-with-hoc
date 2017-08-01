@@ -1,0 +1,9 @@
+function adjust(fn) {
+  return function(list) {
+    return list.map(fn);
+  }
+}
+
+const add2ToEach = adjust(x => x * 2);
+
+add2ToEach([1, 2, 3, 4]); // [2, 4, 6, 8]

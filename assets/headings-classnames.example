@@ -1,0 +1,52 @@
+const Heading = ({
+  className,
+  level = 1,
+  f = 1,
+  color = 'dark-gray',
+  ...props
+}) => {
+  const Tag = `$h{level}`;
+  const styles = classNames(
+    'avenir fw7 lh-title',
+    `f${f}`,
+    color,
+    className
+  );
+  return (
+    <Tag className={styles} {...props} />
+  );
+};
+
+const Text = ({
+  className,
+  f = 5,
+  color = 'mid-gray',
+  ...props
+}) => {
+  const styles = classNames(
+    'avenir fw4 lh-copy',
+    `f${f}`,
+    color,
+    className
+  );
+  <p className={styles} {...props} />
+};
+
+const Solid = ({
+  className,
+  f = 5,
+  color = 'gray',
+  ...props
+}) => (
+  <span className={styles} {...props} />
+);
+
+// In other Components
+<Heading
+  level={2}
+  f={4}
+  color={blue}
+  className="mb3 mt0"
+>
+  Section Title
+</Heading>

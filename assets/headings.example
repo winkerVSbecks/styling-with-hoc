@@ -1,0 +1,17 @@
+export const Heading1 = compose(
+  defaultProps({ ff: 'simplon', f: 1, fw: 7, lh: 1, color: 'rBlack', bg: 'transparent' }),
+  withStyleProps,
+)(Text);
+Heading1.displayName = 'Heading1';
+
+export const Heading2 = compose(
+  defaultProps({ ff: 'simplon', f: 2, fw: 7, lh: 2, color: 'rBlack', bg: 'transparent' }),
+  withStyleProps,
+)(Text);
+Heading2.displayName = 'Heading2';
+
+export const Heading3 = compose(
+  defaultProps({ ff: 'simplon', f: 4, fw: 7, lh: 4, color: 'rBlack', bg: 'transparent' }),
+  withStyleProps,
+)(Text);
+Heading3.displayName = 'Heading3';
