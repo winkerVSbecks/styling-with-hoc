@@ -1,17 +1,31 @@
 const Heading = ({ className, level = 1, ...props }) => {
   const Tag = `$h{level}`;
   return (
-    <Tag className={`avenir fw7 lh-title f1 dark-gray ${className}`} {...props} />
+    <Tag
+      className={`avenir fw7 lh-title f1 dark-gray ${className}`}
+      {...props}
+    />
   );
 };
 
 const Text = ({ className, ...props }) => (
-  <p className={`avenir fw4 lh-copy f5 mid-gray ${className}`} {...props} />
+  <p
+    className={`avenir fw4 lh-copy f5 mid-gray ${className}`}
+    {...props}
+  />
 );
 
 const Solid = ({ className, ...props }) => (
-  <span className={`avenir fw4 lh-solid f5 gray ${className}`} {...props} />
+  <span
+    className={`avenir fw4 lh-solid f5 gray ${className}`}
+    {...props}
+  />
 );
 
 // In other Components
-<Heading level={2} className="f4 blue mb3 mt0">Section Title</Heading>
+<Heading
+  level={2}
+  className="f4 blue mb3 mt0"
+>
+  Section Title
+</Heading>
