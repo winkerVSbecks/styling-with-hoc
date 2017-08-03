@@ -84,6 +84,9 @@ export default class Presentation extends React.Component {
               https://github.com/paypal/glamorous
             </ListItem>
             <ListItem margin="1rem 0">
+              https://github.com/pricelinelabs/design-system
+            </ListItem>
+            <ListItem margin="1rem 0">
               https://github.com/jxnblk/grid-styled
             </ListItem>
           </List>

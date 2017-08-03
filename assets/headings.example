@@ -1,17 +1,20 @@
-export const Heading1 = compose(
-  defaultProps({ ff: 'simplon', f: 1, fw: 7, lh: 1, color: 'rBlack', bg: 'transparent' }),
+export const Heading = compose(
+  defaultProps({ level: 1, f: 1, fw: 7, lh: 'title', color: 'dark-gray' }),
+  withBaseStyles('avenir'),
   withStyleProps,
 )(Text);
-Heading1.displayName = 'Heading1';
+Heading.displayName = 'Heading';
 
-export const Heading2 = compose(
-  defaultProps({ ff: 'simplon', f: 2, fw: 7, lh: 2, color: 'rBlack', bg: 'transparent' }),
+export const Text = compose(
+  defaultProps({ f: 5, fw: 4, lh: 'copy', color: 'mid-gray' }),
+  withBaseStyles('avenir'),
   withStyleProps,
 )(Text);
-Heading2.displayName = 'Heading2';
+Text.displayName = 'Text';
 
-export const Heading3 = compose(
-  defaultProps({ ff: 'simplon', f: 4, fw: 7, lh: 4, color: 'rBlack', bg: 'transparent' }),
+export const Solid = compose(
+  defaultProps({ f: 5, fw: 4, lh: 'solid', color: 'blue' }),
+  withBaseStyles('avenir'),
   withStyleProps,
 )(Text);
-Heading3.displayName = 'Heading3';
+Solid.displayName = 'Solid';
