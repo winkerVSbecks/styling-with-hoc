@@ -103,15 +103,27 @@ export default [
         props
       </ListItem>
       <ListItem margin="2rem 0" textSize="1.75rem">
-        <Code textSize="1.75rem">withBaseStyles()</Code> provide a set of base
-        classnames to be applied
+        <Code textSize="1.75rem">withBaseStyles()</Code> applies a set of base
+        classes always
       </ListItem>
       <ListItem margin="2rem 0" textSize="1.75rem">
-        <Code textSize="1.75rem">defaultProps()</Code> provide default value for
-        props
+        <Code textSize="1.75rem">defaultProps()</Code> provide default values
+        for props
       </ListItem>
     </List>
   </Slide>,
+  <CodeSlide
+    transition={[]}
+    textSize="1.5rem"
+    lang="js"
+    code={require('raw-loader!../assets/headings.example')}
+    ranges={[
+      { loc: [0, 0], title: 'Typograhy with HOCs' },
+      { loc: [0, 9] },
+      { loc: [10, 19] },
+      { loc: [20, 29] },
+    ]}
+  />,
   <Slide>
     <Heading size={5} lineHeight={1} textColor="secondary">
       Block
