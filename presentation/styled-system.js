@@ -23,21 +23,11 @@ import CodeSlide from 'spectacle-code-slide';
 import preloader from 'spectacle/lib/utils/preloader';
 const images = {
   tachyonsScales: require('../assets/tachyons-scales.gif'),
+  jb: require('../assets/jb.png'),
+  jbHeadings: require('../assets/jb-headings.png'),
 };
 
 preloader(images);
-
-// bgTransform,
-// colorTransform,
-// typeScaleTransform,
-// spacingTransform,
-// widthTransform,
-// heightTransform,
-// borderTransform,
-// radiusTransform,
-// fontFamilyTransform,
-// fontWeightTransform,
-// lineHeightTransform,
 
 export default [
   <Slide>
@@ -75,6 +65,12 @@ export default [
     >
       Building Components 🛠️<br />Using the Design System
     </Heading>
+  </Slide>,
+  <Slide bgColor="primary">
+    <Image margin="2rem auto" width="100%" src={images.jb} />
+  </Slide>,
+  <Slide bgColor="primary">
+    <Image margin="2rem auto" width="100%" src={images.jbHeadings} />
   </Slide>,
   <Slide>
     <div
@@ -189,7 +185,7 @@ export default [
     ranges={[
       {
         loc: [0, 0],
-        title: 'Design System Components with ClassNames',
+        title: 'v2 with ClassNames',
         note: 'github.com/JedWatson/classnames',
       },
       { loc: [0, 19] },
@@ -204,36 +200,79 @@ export default [
   />,
   <Slide>
     <Heading size={5} lineHeight={1} textColor="secondary">
-      we repeat this a lot, didn't account for MQ, type checking?
+      Props ➡️ className
     </Heading>
+    <List textColor="secondary">
+      <ListItem margin="1rem 0">We repeat this pattern a lot!</ListItem>
+      <ListItem margin="1rem 0">What about media queries?</ListItem>
+      <ListItem margin="1rem 0">Can we type check these values?</ListItem>
+      <ListItem margin="1rem 0">
+        It enforces only a subset of the design system
+      </ListItem>
+    </List>
   </Slide>,
   <Slide>
-    <Heading size={5} lineHeight={1} textColor="secondary">
-      Block
+    <Heading
+      size={3}
+      textAlign="left"
+      textColor="tertiary"
+      lineHeight={1}
+      style={{ display: 'flex', alignItems: 'center' }}
+    >
+      <svg
+        width="1em"
+        height="1em"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        style={{ marginRight: '1rem', transform: 'rotate(-90deg)' }}
+      >
+        <path
+          fill="#FFD700"
+          d="M1 12.155c2.256 3.97 4.55 7.918 6.879 11.845h-5.379c-.829 0-1.5-.675-1.5-1.5v-10.345zm2.85.859c3.278 1.952 12.866 7.658 13.121 7.805l-5.162 2.98c-.231.132-.49.201-.751.201-.549 0-1.037-.298-1.299-.75l-5.909-10.236zm1.9-12.813c-.23-.133-.489-.201-.75-.201-.524 0-1.026.277-1.299.75l-3.5 6.062c-.133.23-.201.489-.201.749 0 .527.278 1.028.75 1.3 2.936 1.695 14.58 8.7 17.516 10.396.718.413 1.633.168 2.048-.55l3.5-6.062c.133-.23.186-.488.186-.749 0-.52-.257-1.025-.734-1.3l-17.516-10.395m.25 3.944c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2"
+        />
+      </svg>
+      Design System
     </Heading>
+    <List textColor="secondary">
+      <ListItem margin="1rem 0">Background Colour</ListItem>
+      <ListItem margin="1rem 0">Text Colour</ListItem>
+      <ListItem margin="1rem 0">Spacing: Padding & Margin</ListItem>
+      <ListItem margin="1rem 0">Sizing: Width & Height</ListItem>
+      <ListItem margin="1rem 0">Border: Colour, Width & Radius</ListItem>
+      <ListItem margin="1rem 0">Type Scale & Line Height</ListItem>
+      <ListItem margin="1rem 0">Font Weight</ListItem>
+    </List>
   </Slide>,
-  <Slide>
-    <Heading size={5} lineHeight={1} textColor="secondary">
-      Real world example – product card
+  <Slide bgColor="secondary">
+    <Heading size={5} lineHeight={1} textColor="primary">
+      Props for Everything?
     </Heading>
   </Slide>,
   <CodeSlide
     transition={[]}
     textSize="1.5rem"
     lang="js"
-    code={require('raw-loader!../assets/design-system.example')}
+    code={`<Heading
+  level={2}
+  f={{ all: 5, m: 4, ns: 3 }}
+  lh="solid"
+  color="navy"
+  bg="light-purple"
+  mt={0}
+  className="flex-auto"
+>
+  Section Heading
+</Heading>
+    `}
     ranges={[
-      { loc: [0, 0], title: 'Design System Described in Flow' },
-      {
-        loc: [0, 1],
-        title: 'Colour Palette',
-        note: 'Text and background colours',
-      },
-      { loc: [2, 13], title: 'Spacing – Margin & Padding' },
-      { loc: [14, 17], title: 'Sizing – Widths & Heights' },
-      { loc: [18, 22], title: 'Typography' },
-      { loc: [23, 31], title: 'Border – Color' },
-      { loc: [32, 38], title: 'Border – Sizing & Direction' },
+      { loc: [0, 12], title: 'Design System as Props!' },
+      { loc: [1, 2], title: 'Heading level === Tag' },
+      { loc: [2, 4], title: 'Font Size and Line-height' },
+      { loc: [4, 6], title: 'Colours' },
+      { loc: [6, 7], title: 'Spacing, etc.' },
+      { loc: [7, 8], title: 'And everything else' },
     ]}
   />,
 ];

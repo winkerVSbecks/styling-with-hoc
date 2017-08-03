@@ -30,6 +30,7 @@ require('spectacle/lib/themes/default/index.css');
 
 import hocExplained from './hoc-explained';
 import styledSystem from './styled-system';
+import hocSystem from './hoc-system';
 
 const images = {};
 
@@ -64,12 +65,36 @@ export default class Presentation extends React.Component {
         </Slide>
         {React.Children.toArray(styledSystem)}
         {React.Children.toArray(hocExplained)}
+        {React.Children.toArray(hocSystem)}
+        <Slide bgColor="secondary">
+          <Heading
+            size={4}
+            lineHeight={1.25}
+            textColor="primary"
+            textAlign="left"
+          >
+            This is not the only way to do things. This is not the right way.<br />
+            It is just one way.
+          </Heading>
+        </Slide>
+        <Slide bgColor="tertiary">
+          <Heading size={4} lineHeight={1} textColor="primary">
+            Other Similar Approaches
+          </Heading>
+          <List textColor="secondary">
+            <ListItem margin="1rem 0">http://jxnblk.com/rebass/</ListItem>
+            <ListItem margin="1rem 0">
+              https://github.com/jxnblk/styled-system
+            </ListItem>
+            <ListItem margin="1rem 0">
+              https://github.com/paypal/glamorous
+            </ListItem>
+            <ListItem margin="1rem 0">
+              https://github.com/jxnblk/grid-styled
+            </ListItem>
+          </List>
+        </Slide>
       </Deck>
     );
   }
 }
-
-// http://jxnblk.com/rebass/
-// https://github.com/jxnblk/styled-system
-// https://github.com/paypal/glamorous
-// https://github.com/jxnblk/grid-styled
