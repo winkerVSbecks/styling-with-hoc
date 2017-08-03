@@ -1,7 +1,4 @@
-// Import React
 import React from 'react';
-
-// Import Spectacle Core tags
 import {
   BlockQuote,
   Cite,
@@ -9,6 +6,7 @@ import {
   CodePane,
   Deck,
   Heading,
+  Image,
   ListItem,
   List,
   Quote,
@@ -17,6 +15,13 @@ import {
   MarkdownSlides,
 } from 'spectacle';
 import CodeSlide from 'spectacle-code-slide';
+
+import preloader from 'spectacle/lib/utils/preloader';
+const images = {
+  owl: require('../assets/owl.jpg'),
+};
+
+preloader(images);
 
 export default [
   <Slide bgColor="tertiary">
@@ -41,11 +46,11 @@ export default [
     lang="js"
     code={require('raw-loader!../assets/typography-hoc.example')}
     ranges={[
-      { loc: [0, 21] },
+      { loc: [0, 22] },
       { loc: [1, 15], title: 'Typography HOC' },
       { loc: [2, 6], title: 'Props in…' },
       { loc: [8, 12], title: '…styles out' },
-      { loc: [13, 14], title: 'only transforming props' },
+      { loc: [13, 14], title: 'Only Transforming Props' },
       { loc: [16, 19], title: 'Display Name' },
       {
         loc: [22, 30],
@@ -65,4 +70,7 @@ export default [
       { loc: [33, 40], title: 'Usage' },
     ]}
   />,
+  <Slide>
+    <Image src={images.owl} width="50%" />
+  </Slide>
 ];

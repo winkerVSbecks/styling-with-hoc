@@ -1,7 +1,4 @@
-// Import React
 import React from 'react';
-
-// Import Spectacle Core tags
 import {
   BlockQuote,
   Cite,

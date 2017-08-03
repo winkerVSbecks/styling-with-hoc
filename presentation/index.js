@@ -1,7 +1,4 @@
-// Import React
 import React from 'react';
-
-// Import Spectacle Core tags
 import {
   BlockQuote,
   Cite,
@@ -18,13 +15,10 @@ import {
 } from 'spectacle';
 import CodeSlide from 'spectacle-code-slide';
 
-// Import image preloader util
 import preloader from 'spectacle/lib/utils/preloader';
 
-// Import theme
 import createTheme from 'spectacle/lib/themes/default';
 
-// Require CSS
 require('normalize.css');
 require('spectacle/lib/themes/default/index.css');
 
