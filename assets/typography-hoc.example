@@ -1,0 +1,39 @@
+function withTypography(ComposedComponent) {
+  function WithTypography({
+    f = 5,
+    lh = 'copy',
+    fw = 4,
+    className,
+    ...passThroughProps
+  }) {
+    const props = {
+      classNames: className(`f${f} lh-${lh} fw${fw}`, className),
+      ...passThroughProps,
+    };
+
+    return <WithTypography {...props} />;
+  }
+
+  WithTypography.displayName = `WithTypography(${getDisplayName(
+    ComposedComponent,
+  )})`;
+
+  return WithTypography;
+}
+
+function getDisplayName(ComposedComponent) {
+  return (
+    ComposedComponent.displayName ||
+    ComposedComponent.name ||
+    'Component'
+  );
+}
+
+const Text = withTypography('p');
+
+const Page = () =>
+  <div>
+    <Text f={3} fw={8} lh="solid">
+      Hello World
+    </Text>
+  </div>;

@@ -1,0 +1,27 @@
+function withLoader(ComposedComponent) {
+  function WithLoader({ isLoading, ...passThroughProps }) {
+    return (
+      isLoading ? <Loader /> : <ComposedComponent {...passThroughProps} />
+    );
+  }
+
+  WithLoader.displayName = `WithLoader(${getDisplayName(ComposedComponent)})`;
+
+  return WithLoader;
+}
+
+function getDisplayName(ComposedComponent) {
+  return (
+    ComposedComponent.displayName ||
+    ComposedComponent.name ||
+    'Component'
+  );
+}
+
+const TodoListWithLoader = withLoader(TodoList);
+
+const Page = ({ todoListIsLoading }) => (
+  <div>
+    <TodoListWithLoader isLoading={todoListIsLoading} />
+  </div>
+);
