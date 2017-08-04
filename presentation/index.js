@@ -115,13 +115,18 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="secondary">
           <Heading
-            size={4}
+            size={5}
             lineHeight={1.25}
             textColor="primary"
             textAlign="left"
           >
-            This is just one approach.<br />There are many other ways to use a
-            design system.
+            This is just one approach. There are many other ways of writing CSS.
+            Just maybe consider using a design system.
+          </Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading size={3} textColor="tertiary">
+            Thank You!
           </Heading>
         </Slide>
       </Deck>

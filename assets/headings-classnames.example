@@ -45,7 +45,7 @@ const Solid = ({
 <Heading
   level={2}
   f={4}
-  color={blue}
+  color="blue"
   className="mb3 mt0"
 >
   Section Title

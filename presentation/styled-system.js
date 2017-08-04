@@ -63,12 +63,6 @@ export default [
       Building Components 🛠️<br />Using the Design System
     </Heading>
   </Slide>,
-  <Slide bgColor="primary">
-    <Image margin="2rem auto" width="100%" src={images.jb} />
-  </Slide>,
-  <Slide bgColor="primary">
-    <Image margin="2rem auto" width="100%" src={images.jbHeadings} />
-  </Slide>,
   <Slide>
     <div
       style={{
@@ -130,6 +124,17 @@ export default [
         </span>
       </div>
     </div>
+  </Slide>,
+  <Slide bgColor="primary">
+    <Image margin="2rem auto" width="100%" src={images.jb} />
+  </Slide>,
+  <Slide bgColor="primary">
+    <Image margin="2rem auto" width="100%" src={images.jbHeadings} />
+  </Slide>,
+  <Slide bgColor="secondary">
+    <Heading size={1} lineHeight={1.5} textColor="primary" margin="0 0 2rem 0">
+      The Atoms
+    </Heading>
   </Slide>,
   <Slide>
     <Heading
@@ -238,8 +243,7 @@ export default [
       <ListItem margin="1rem 0">Spacing: Padding & Margin</ListItem>
       <ListItem margin="1rem 0">Sizing: Width & Height</ListItem>
       <ListItem margin="1rem 0">Border: Colour, Width & Radius</ListItem>
-      <ListItem margin="1rem 0">Type Scale & Line Height</ListItem>
-      <ListItem margin="1rem 0">Font Weight</ListItem>
+      <ListItem margin="1rem 0">Type Scale, Line Height & Font Weight</ListItem>
     </List>
   </Slide>,
   <Slide bgColor="secondary">

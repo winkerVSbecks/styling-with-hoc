@@ -122,6 +122,7 @@ export default [
     ranges={[
       { loc: [0, 0], title: 'Typograhy with HOCs' },
       { loc: [0, 12] },
+      { loc: [1, 6] },
       { loc: [13, 22] },
       { loc: [23, 32] },
     ]}
@@ -148,7 +149,30 @@ Block.displayName = 'Block';
 
 
 `}
-    ranges={[{ loc: [0, 2], title: 'Block' }, { loc: [3, 15] }]}
+    ranges={[
+      { loc: [0, 2], title: 'Block' },
+      { loc: [3, 15] },
+      { loc: [4, 5] },
+    ]}
+  />,
+  <CodeSlide
+    transition={[]}
+    textSize="1.5rem"
+    lang="js"
+    code={require('raw-loader!../assets/design-system.example')}
+    ranges={[
+      { loc: [0, 0], title: 'Flow!' },
+      {
+        loc: [0, 1],
+        title: 'Colour Palette',
+        note: 'Text and background colours',
+      },
+      { loc: [2, 13], title: 'Spacing – Margin & Padding' },
+      { loc: [14, 17], title: 'Sizing – Widths & Heights' },
+      { loc: [18, 22], title: 'Typography' },
+      { loc: [23, 31], title: 'Border – Color' },
+      { loc: [32, 38], title: 'Border – Sizing & Direction' },
+    ]}
   />,
   <Slide bgColor="#F2F3F4">
     <Image src={images.airbnb} margin="0 auto" width="75%" />
