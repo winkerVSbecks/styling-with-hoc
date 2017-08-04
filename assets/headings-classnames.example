@@ -5,7 +5,7 @@ const Heading = ({
   color = 'dark-gray',
   ...props
 }) => {
-  const Tag = `$h{level}`;
+  const Tag = `h${level}`;
   const styles = classNames(
     'avenir fw7 lh-title',
     `f${f}`,

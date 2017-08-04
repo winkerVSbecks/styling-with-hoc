@@ -24,7 +24,9 @@ import {
 import CodeSlide from 'spectacle-code-slide';
 
 import preloader from 'spectacle/lib/utils/preloader';
-const images = {};
+const images = {
+  airbnb: require('../assets/airbnb.jpg'),
+};
 
 preloader(images);
 
@@ -119,38 +121,45 @@ export default [
     code={require('raw-loader!../assets/headings.example')}
     ranges={[
       { loc: [0, 0], title: 'Typograhy with HOCs' },
-      { loc: [0, 9] },
-      { loc: [10, 19] },
-      { loc: [20, 29] },
+      { loc: [0, 12] },
+      { loc: [13, 22] },
+      { loc: [23, 32] },
     ]}
   />,
-  <Slide>
-    <Heading size={5} lineHeight={1} textColor="secondary">
-      Block
-    </Heading>
-  </Slide>,
-  <Slide>
-    <Heading size={5} lineHeight={1} textColor="secondary">
-      Real world example – product card
-    </Heading>
-  </Slide>,
   <CodeSlide
     transition={[]}
-    textSize="1.5rem"
+    textSize="2rem"
     lang="js"
-    code={require('raw-loader!../assets/design-system.example')}
-    ranges={[
-      { loc: [0, 0], title: 'Design System Described in Flow' },
-      {
-        loc: [0, 1],
-        title: 'Colour Palette',
-        note: 'Text and background colours',
-      },
-      { loc: [2, 13], title: 'Spacing – Margin & Padding' },
-      { loc: [14, 17], title: 'Sizing – Widths & Heights' },
-      { loc: [18, 22], title: 'Typography' },
-      { loc: [23, 31], title: 'Border – Color' },
-      { loc: [32, 38], title: 'Border – Sizing & Direction' },
-    ]}
+    code={`export const Block = withDesignSystem('div');
+Block.displayName = 'Block';
+
+<Block
+  f={{ l: 4, m: 3, ns: 2, all: 1 }}
+  lh="copy"
+  mh={3} mv={2} mt={4} nl={3}
+  pa={{ l: 4, m: 4, ns: 3, all: 2 }}
+  bg="blue"
+  color="white"
+  w={5}
+  h={{ l: 50, m: 4, ns: 3, all: 2 }}
+  bb="gray" bw={{ l: 1, m: 2, ns: 3, all: 4 }}
+  radius="pill"
+/>
+
+
+`}
+    ranges={[{ loc: [0, 2], title: 'Block' }, { loc: [3, 15] }]}
   />,
+  <Slide bgColor="#F2F3F4">
+    <Image src={images.airbnb} margin="0 auto" width="75%" />
+    <Text margin="0">
+      <Link
+        textColor="tertiary"
+        textSize="1rem"
+        href="https://hoc-design-system.glitch.me"
+      >
+        hoc-design-system.glitch.me
+      </Link>
+    </Text>
+  </Slide>,
 ];

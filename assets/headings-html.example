@@ -1,5 +1,5 @@
 const Heading = ({ className, level = 1, ...props }) => {
-  const Tag = `$h{level}`;
+  const Tag = `h${level}`;
   return (
     <Tag
       className={`avenir fw7 lh-title f1 dark-gray ${className}`}

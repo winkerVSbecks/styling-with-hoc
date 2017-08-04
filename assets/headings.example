@@ -4,7 +4,10 @@ export const Heading = compose(
   }),
   withBaseStyles('avenir'),
   withDesignSystem,
-)(Text);
+)(({ level, ...props }) => {
+  const Tag = `h${level}`;
+  return <Tag {...props} />;
+});
 
 Heading.displayName = 'Heading';
 
@@ -14,7 +17,7 @@ export const Text = compose(
   }),
   withBaseStyles('avenir'),
   withDesignSystem,
-)(Text);
+)('p');
 
 Text.displayName = 'Text';
 
@@ -24,6 +27,6 @@ export const Solid = compose(
   }),
   withBaseStyles('avenir'),
   withDesignSystem,
-)(Text);
+)('span');
 
 Solid.displayName = 'Solid';

@@ -25,7 +25,7 @@ preloader(images);
 
 export default [
   <Slide bgColor="tertiary">
-    <Heading size={1} lineHeight={1} textColor="primary" textAlign="left">
+    <Heading size={1} lineHeight={1} textColor="primary">
       Higher-order Components
     </Heading>
   </Slide>,
@@ -72,5 +72,5 @@ export default [
   />,
   <Slide>
     <Image src={images.owl} width="50%" />
-  </Slide>
+  </Slide>,
 ];

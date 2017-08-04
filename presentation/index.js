@@ -11,6 +11,7 @@ import {
   Quote,
   Slide,
   Text,
+  Link,
   MarkdownSlides,
 } from 'spectacle';
 import CodeSlide from 'spectacle-code-slide';
@@ -60,6 +61,58 @@ export default class Presentation extends React.Component {
         {React.Children.toArray(styledSystem)}
         {React.Children.toArray(hocExplained)}
         {React.Children.toArray(hocSystem)}
+        <Slide bgColor="primary">
+          <Heading size={4} lineHeight={1} textColor="secondary">
+            Libraries
+          </Heading>
+          <List textColor="secondary">
+            <ListItem margin="1rem 0" textSize="1.75rem">
+              <Link
+                textColor="tertiary"
+                href="https://github.com/winkerVSbecks/tachyons-measured"
+              >
+                github.com/winkerVSbecks/tachyons-measured
+              </Link>
+            </ListItem>
+            <ListItem margin="1rem 0" textSize="1.75rem">
+              <Link textColor="tertiary" href="http://jxnblk.com/rebass">
+                jxnblk.com/rebass
+              </Link>
+            </ListItem>
+            <ListItem margin="1rem 0" textSize="1.75rem">
+              <Link
+                textColor="tertiary"
+                href="https://github.com/jxnblk/styled-system"
+              >
+                github.com/jxnblk/styled-system
+              </Link>
+            </ListItem>
+            <ListItem margin="1rem 0" textSize="1.75rem">
+              <Link
+                textColor="tertiary"
+                href="https://vasanthk.gitbooks.io/react-bits/styling/05.base-component.html"
+              >
+                react-bits/styling/base-component
+              </Link>
+            </ListItem>
+            <ListItem margin="1rem 0" textSize="1.75rem">
+              <Link
+                textColor="tertiary"
+                href="https://github.com/pricelinelabs/design-system"
+              >
+                github.com/pricelinelabs/design-system
+              </Link>
+            </ListItem>
+            <ListItem margin="1rem 0" textSize="1.75rem">
+              <Link
+                textColor="tertiary"
+                href="https://jamesmcallister.github.io/styled-components-tachyons"
+              >
+                jamesmcallister.github.io/styled-components-tachyons
+              </Link>
+            </ListItem>
+          </List>
+        </Slide>
         <Slide bgColor="secondary">
           <Heading
             size={4}
@@ -67,29 +120,9 @@ export default class Presentation extends React.Component {
             textColor="primary"
             textAlign="left"
           >
-            This is not the only way to do things. This is not the right way.<br />
-            It is just one way.
+            This is just one approach.<br />There are many other ways to use a
+            design system.
           </Heading>
-        </Slide>
-        <Slide bgColor="tertiary">
-          <Heading size={4} lineHeight={1} textColor="primary">
-            Other Similar Approaches
-          </Heading>
-          <List textColor="secondary">
-            <ListItem margin="1rem 0">http://jxnblk.com/rebass/</ListItem>
-            <ListItem margin="1rem 0">
-              https://github.com/jxnblk/styled-system
-            </ListItem>
-            <ListItem margin="1rem 0">
-              https://github.com/paypal/glamorous
-            </ListItem>
-            <ListItem margin="1rem 0">
-              https://github.com/pricelinelabs/design-system
-            </ListItem>
-            <ListItem margin="1rem 0">
-              https://github.com/jxnblk/grid-styled
-            </ListItem>
-          </List>
         </Slide>
       </Deck>
     );
